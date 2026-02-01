@@ -1,138 +1,81 @@
 :root {
   --primary: #141414;
   --secondary: #f4f4f4;
-  --success: #30e60b;
-  --danger: #b32318;
-  --light: #fff;
-  --dark: #000;
+  --light: #ffffff;
+  --dark: #000000;
   --text-main: #141414;
   --text-muted: #626262;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
+/* Reset */
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #333;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Allow scrolling if content is tall */
-  height: auto; 
-  padding-top: 40px;
-  padding-bottom: 40px;
+}
+
+/* Body */
+body {
   font-family: var(--font-sans);
   background-color: var(--light);
   color: var(--text-main);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
+/* Container */
 .container {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  max-width: 600px; /* Increased width for grid */
-  width: 90%;
-  text-align: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Links */
 a {
   text-decoration: none;
-  color: inherit;
+  color: #667eea;
   transition: color 0.3s ease;
 }
 
-h1, h2 {
-  color: #2c3e50;
-  margin-bottom: 10px;
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+a:hover {
+  color: #4b6cb7;
+}
+
+/* Headings (REDUCED SIZE) */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 15px;
 }
 
 h2 {
-  color: #4b6cb7;
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  font-weight: 300; /* WAC uses light weights for headings */
-  line-height: 1.2;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 12px;
 }
 
 h3 {
-  color: #333;
-  margin-top: 30px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
-h1 { font-size: 3.5rem; letter-spacing: -0.02em; }
-h2 { font-size: 2.5rem; letter-spacing: -0.01em; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
 
+/* Paragraph */
 p {
-  font-size: 1.1em;
-  color: #555;
-  margin-bottom: 20px;
-  margin-bottom: 1rem;
-  font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-muted);
+  margin-bottom: 1rem;
 }
-
-button {
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-  border: none;
-  border-radius: 25px;
-  color: white;
-  padding: 12px 24px;
-  text-align: center;
-  text-decoration: none;
-/* Utilities */
-.container {
-  width: 100%;
-  max-width: 1320px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.text-center { text-align: center; }
-.text-white { color: var(--light); }
-.bg-dark { background-color: var(--dark); color: var(--light); }
-.d-flex { display: flex; }
-.justify-between { justify-content: space-between; }
-.align-center { align-items: center; }
-.flex-col { flex-direction: column; }
-.gap-4 { gap: 1rem; }
-.py-5 { padding-top: 4rem; padding-bottom: 4rem; }
-.mb-4 { margin-bottom: 1.5rem; }
 
 /* Buttons */
 .btn {
   display: inline-block;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-weight: 500;
-  font-size: 1rem;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  border-radius: 25px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  transition: all 0.3s ease;
+  border: none;
 }
 
 .btn-primary {
@@ -140,323 +83,68 @@ button {
   color: var(--light);
 }
 
-button:hover {
 .btn-primary:hover {
   background-color: #333;
-  transform: translateY(-2px);
-  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
-}
-
-a {
-  color: #764ba2;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-.btn-outline-light {
-  background-color: transparent;
-  border-color: var(--light);
-  color: var(--light);
-}
-
-a:hover {
-  color: #667eea;
-.btn-outline-light:hover {
-  background-color: var(--light);
-  color: var(--dark);
-}
-
-.whatsapp-link {
-  display: inline-block;
-  background-color: #25D366;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: background-color 0.3s;
-  margin-top: 20px;
-/* Header */
-header {
-  padding: 20px 0;
-  position: absolute;
-  width: 100%;
-  z-index: 10;
-  top: 0;
-  background: rgba(255, 255, 255, 0.95); /* Light header like typical inner pages, or transparent for home */
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-header.transparent {
-  background: transparent;
-  border-bottom: none;
-}
-
-header .logo {
-  font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: -0.02em;
-}
-
-header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 30px;
-}
-
-header nav a {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-main);
-}
-
-.whatsapp-link:hover {
-  background-color: #128C7E;
-  color: white;
-header nav a:hover {
-  color: var(--text-muted);
 }
 
 /* Hero Section */
 .hero {
-  position: relative;
   min-height: 100vh;
+  background: #000;
+  color: #fff;
   display: flex;
   align-items: center;
-  background-color: #000;
-  color: #fff;
-  overflow: hidden;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  font-weight: 200;
+  font-size: 2.6rem; /* REDUCED */
+  font-weight: 300;
 }
 
 .hero p {
+  font-size: 1.1rem;
   color: rgba(255,255,255,0.8);
-  font-size: 1.25rem;
-  margin-bottom: 40px;
 }
 
-/* Section: What We Do (Services) */
-.services-section {
-  background-color: #fff;
-}
-
-.section-title {
-  margin-bottom: 3rem;
-  font-size: 3rem;
-  font-weight: 300;
-  color: var(--text-main);
-}
-
-/* Services Grid Styles */
+/* Services */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-  text-align: left;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
 .service-card {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-  text-align: center;
   background: #f9f9f9;
-  padding: 0;
-  border-radius: 0; /* WAC often uses sharp corners or very subtle radius */
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.service-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  transform: translateY(-5px);
-}
-
-.service-card .icon {
-  font-size: 2em;
-  margin-bottom: 10px;
-.service-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  background-color: #eee;
-}
-
-.service-content {
-  padding: 30px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 25px;
+  text-align: center;
 }
 
 .service-card h4 {
-  margin: 5px 0;
-  font-size: 0.9em;
-  color: #333;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
-  font-weight: 400;
 }
 
 .service-card p {
-  margin: 0;
-  font-size: 0.8em;
-  color: #777;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: #555;
+  font-size: 0.95rem;
 }
 
-.link-arrow {
-  font-weight: 600;
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.link-arrow::after {
-  content: '→';
-  transition: transform 0.2s;
-}
-
-.service-card:hover .link-arrow::after {
-  transform: translateX(5px);
-}
-
-/* Legacy styles for services.html compatibility */
-ul {
-  list-style-type: none;
 /* Footer */
 footer {
-  background-color: #141414;
+  background: #141414;
   color: #fff;
-  padding: 80px 0 30px;
-}
-
-.footer-top {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  margin-bottom: 60px;
-}
-
-.footer-col h5 {
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-}
-
-li {
-  background-color: #f8f9fa;
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 8px;
-  border-left: 5px solid #4facfe;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  font-size: 1.05em;
-.footer-col li {
-  margin-bottom: 12px;
-}
-
-.back {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 10px 20px;
-  background-color: #e2e8f0;
-  color: #4a5568;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-.footer-col a {
-  color: #999;
-  font-weight: 300;
-}
-
-.back:hover {
-  background-color: #cbd5e0;
-  text-decoration: none;
-  color: #2d3748;
-.footer-col a:hover {
-  color: #fff;
+  padding: 60px 20px;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  color: #666;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  color: #aaa;
+  text-align: center;
 }
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #25D366;
-  color: #fff;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 100;
-  transition: transform 0.3s;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-/* Responsive */
+/* Mobile */
 @media (max-width: 768px) {
-  h1 { font-size: 2.5rem; }
-  header nav { display: none; } /* Simplified for mobile: hide nav */
-  .hero h1 { font-size: 2.5rem; }
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.6rem; }
+  .hero h1 { font-size: 2rem; }
 }
+
